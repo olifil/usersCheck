@@ -20,7 +20,7 @@ $(document).ready(function(){
         }
 
         $.ajax({
-            url: Routing.generate('macif.user.check'),
+            url: "/app_dev.php/macif/userCheck", // Routing.generate('macif.user.check')
             type: "GET",
             data: {
                 prenom: prenom,
