@@ -18,7 +18,7 @@ $(document).ready(function(){
             console.log('Il y a au moins un champs vide');
             return;
         }
-
+        console.log(Routing.generate('macif.user.check'));
         $.ajax({
             url: "/macif/userCheck", // Routing.generate('macif.user.check')
             type: "GET",
