@@ -7,3 +7,6 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    service.data:
+        class:      AppBundle\Services\Data
+        arguments:  ['@doctrine.orm.entity_manager']

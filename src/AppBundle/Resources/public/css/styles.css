@@ -1,0 +1,59 @@
+html,
+body {
+  height: 100%;
+  color: white;
+}
+body {
+  background: radial-gradient(#c8c8c8, #1e1e1e);
+}
+.top {
+  margin-top: 50px;
+}
+.logo {
+  width: 100px;
+}
+h2 {
+  color: white;
+  text-align: center;
+}
+.baseline {
+  margin-top: 30px;
+  text-align: center;
+  font-family: exo;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.logout {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  text-align: right;
+}
+.response {
+  margin: 20px;
+  text-align: center;
+}
+.help {
+  border-bottom: 1px dashed #97d9f6;
+}
+.help:hover {
+  cursor: help;
+}
+.flashbag-info {
+  padding: 10px;
+  background-color: rgba(200, 200, 200, 0.5);
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 1.2em;
+  color: #1e1e1e !important;
+}
+.highlight {
+  font-weight: bold;
+  color: #97d9f6;
+}
+.manual-check {
+  background-color: #126c93;
+  font-weight: bold;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rezopouce | Macif</title>
+
+    {# stylesheets #}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('bundles/app/assets/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|PT+Sans|Exo:400,700&amp;subset=latin,latin-ext" />
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/styles.css') }}">
+
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body>
+    <div class="container-fluid">
+        {% if is_granted('ROLE_OPERATEUR_MACIF') %}
+        <a href="{{ path('logout') }}" class="btn btn-default logout" title="Se déconnecter">
+            <span class="fa fa-fw fa-sign-out"></span>
+            Déconnection
+        </a>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-12 top">
+                <img src="{{ asset('bundles/app/imgs/logo.png')}}" alt="Logo Rezo Pouce" class="center-block logo">
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-md-offset-3 col-md-6 baseline">
+                L'autostop au quotidien
+            </p>
+        </div>
+
+        {# Messages d'info #}
+        {% for msg in app.session.flashBag.get('info') %}
+        <div id="flashBag" class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <p class="flashbag-info highlight">{{ msg | raw }}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <h2 class="page-header">{% block pageTitle %}{% endblock %}</h2>
+            </div>
+        </div>
+    {% block body %}{% endblock %}
+    </div>
+
+    {# JAVASCRIPTS #}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    {% block javascripts %}{% endblock %}
+  </body>
+</html>

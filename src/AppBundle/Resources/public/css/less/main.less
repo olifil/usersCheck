@@ -1,0 +1,71 @@
+// out: ../styles.css
+@import "variables.less";
+
+html,
+body {
+    height: 100%;
+    color: white;
+}
+
+body {
+    background: radial-gradient(@gray-light, rgb(30, 30, 30));
+}
+
+.top {
+    margin-top: 50px;
+}
+
+.logo {
+    width: 100px;
+}
+ h2 {
+     color: white;
+     text-align: center;
+ }
+.baseline {
+    margin-top: 30px;
+    text-align: center;
+    font-family: exo;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.logout {
+    position: absolute;
+    top: 5px; right: 15px;
+    text-align: right;
+}
+
+.response {
+    margin: 20px;
+    text-align: center;
+}
+.help {
+    border-bottom: 1px dashed @blue-light;
+
+    &:hover {
+        cursor: help;
+    }
+}
+.flashbag-info {
+    padding: 10px;
+
+    background-color: @gray-light-50;
+    border: 1px solid @gray;
+    border-radius: 4px;
+
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.2em;
+
+    color: rgb(30, 30, 30)!important;
+}
+.highlight {
+    font-weight: bold;
+    color: @blue-light;
+}
+
+.manual-check {
+    background-color: @blue;
+    font-weight: bold;
+}
