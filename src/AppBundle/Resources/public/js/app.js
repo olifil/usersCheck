@@ -33,8 +33,6 @@ $(document).ready(function(){
                     .addClass('fa-spinner fa-pulse');
             },
             success: function(response) {
-                console.log(response.data);
-                console.log(response.data.length);
                 var html;
 
                 if (response.type) {
